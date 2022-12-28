@@ -6,3 +6,12 @@
 //
 
 import UIKit
+import SnapKit
+
+
+final class TodayCollectionViewCell: UICollectionViewCell {
+    
+    func setup() {
+        backgroundColor = .black
+    }
+}
