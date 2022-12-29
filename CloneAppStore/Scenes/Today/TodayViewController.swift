@@ -17,6 +17,7 @@ final class TodayViewController: UIViewController {
         
         collectionView.backgroundColor = .systemBackground
         collectionView.register(TodayCollectionViewCell.self, forCellWithReuseIdentifier: "todayCell")
+        collectionView.register(TodayCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TodayCollectionHeaderView")
         
         return collectionView
     }()
@@ -54,6 +55,26 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         let width = collectionView.frame.width - 32.0
         return CGSize(width: width, height: width)
         //여기서 지금 뷰 5개 칸으로 만들기
+    }
+    
+    //헤더나 뷰터뷰 리턴       // 리유저블뷰
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TodayCollectionHeaderView", for: indexPath) as? TodayCollectionHeaderView else { return TodayCollectionHeaderView() }
+        
+        header.setUpViews()
+        return header
+    }
+    // 사이즈 정리까지 해줘야지 헤더뷰 나타남
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width - 32, height: 100)
+    }
+    
+    // 셀이랑 간격 생기게 해주는 메소드
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let value: CGFloat = 20
+        
+        return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
     }
     
 }

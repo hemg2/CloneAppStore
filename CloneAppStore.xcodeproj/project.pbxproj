@@ -16,6 +16,7 @@
 		637DCAFD295C67FD00DDF50F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 637DCAFC295C67FD00DDF50F /* Kingfisher */; };
 		637DCB02295C72C100DDF50F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB01295C72C100DDF50F /* TodayViewController.swift */; };
 		637DCB05295C7EB300DDF50F /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB04295C7EB300DDF50F /* TodayCollectionViewCell.swift */; };
+		637DCB07295D999400DDF50F /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB06295D999400DDF50F /* TodayCollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		637DCAF6295C5FE900DDF50F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		637DCB01295C72C100DDF50F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		637DCB04295C7EB300DDF50F /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		637DCB06295D999400DDF50F /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				637DCB01295C72C100DDF50F /* TodayViewController.swift */,
+				637DCB06295D999400DDF50F /* TodayCollectionHeaderView.swift */,
 				637DCB03295C7E9E00DDF50F /* Cell */,
 			);
 			path = Today;
@@ -187,6 +190,7 @@
 				637DCB02295C72C100DDF50F /* TodayViewController.swift in Sources */,
 				637DCAF7295C5FE900DDF50F /* TabBarController.swift in Sources */,
 				637DCAE3295C5E7700DDF50F /* AppDelegate.swift in Sources */,
+				637DCB07295D999400DDF50F /* TodayCollectionHeaderView.swift in Sources */,
 				637DCAE5295C5E7700DDF50F /* SceneDelegate.swift in Sources */,
 				637DCB05295C7EB300DDF50F /* TodayCollectionViewCell.swift in Sources */,
 			);
