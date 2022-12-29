@@ -21,7 +21,7 @@ final class FeatureSectionView: UIView {
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell")
+        collectionView.register(FeatureSectionCollectionViewCell.self, forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell")
         
         return collectionView
     }()
@@ -44,9 +44,10 @@ extension FeatureSectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath)
-        cell.backgroundColor = .blue
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as? FeatureSectionCollectionViewCell
+        cell?.setup()
+//        cell.backgroundColor = .blue
+        return cell ?? UICollectionViewCell()
     }
 }
 
