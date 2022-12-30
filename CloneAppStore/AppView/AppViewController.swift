@@ -21,16 +21,20 @@ final class AppViewController: UIViewController {
         
         let featureSectionView = FeatureSectionView(frame: .zero)
         let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
-        let exchangeCodeButtonView = UIView()
+        let exchangeCodeButtonView = ExchangeCodeButtonView(frame: .zero)
+        //버튼 여유가없어서 임이의 뷰를 넣어서 여유있게 만든다.
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(100)
+        }
         
-        exchangeCodeButtonView.backgroundColor = .gray
-        
-        [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView].forEach {
+        [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView, spacingView].forEach {
                 stackView.addArrangedSubview($0)
         }
         
         return stackView
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
