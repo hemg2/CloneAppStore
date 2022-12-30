@@ -20,10 +20,9 @@ final class AppViewController: UIViewController {
         stackView.spacing = 0
         
         let featureSectionView = FeatureSectionView(frame: .zero)
-        let rankingFeatureSectionView = SeparatiorView(frame: .zero)
+        let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
         let exchangeCodeButtonView = UIView()
         
-        rankingFeatureSectionView.backgroundColor = .blue
         exchangeCodeButtonView.backgroundColor = .gray
         
         [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView].forEach {
