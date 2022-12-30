@@ -10,7 +10,7 @@ import SnapKit
 
 
 final class RankingFeatureSectionView: UIView {
-    private let cellHeight: CGFloat = 30
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .black)
@@ -40,7 +40,7 @@ final class RankingFeatureSectionView: UIView {
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell")
+        collectionView.register(RankingFeatureCollectionViewCell.self, forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell")
         
         return collectionView
     }()
@@ -61,7 +61,7 @@ final class RankingFeatureSectionView: UIView {
 
 extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 32, height: cellHeight)
+        return CGSize(width: collectionView.frame.width - 32, height: RankingFeatureCollectionViewCell.height)
     }
     
     
@@ -74,11 +74,11 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath) as? RankingFeatureCollectionViewCell
         
-        cell.backgroundColor = .red
+        cell?.setup()
         
-        return cell //?? UICollectionViewCell()
+        return cell ?? UICollectionViewCell()
     }
 }
 
@@ -101,7 +101,7 @@ private extension RankingFeatureSectionView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16)
-            $0.height.equalTo(cellHeight * 3) // * n 개만큼 셀 표기가됨
+            $0.height.equalTo(RankingFeatureCollectionViewCell.height * 3) // * n 개만큼 셀 표기가됨
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }
