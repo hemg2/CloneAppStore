@@ -24,6 +24,7 @@
 		637DCB13295EA35F00DDF50F /* RankingFeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB12295EA35F00DDF50F /* RankingFeatureSectionView.swift */; };
 		637DCB15295EAF5000DDF50F /* RankingFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB14295EAF5000DDF50F /* RankingFeatureCollectionViewCell.swift */; };
 		637DCB17295EB87E00DDF50F /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB16295EB87E00DDF50F /* ExchangeCodeButtonView.swift */; };
+		637DCB192960612200DDF50F /* AppDeatailViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCB182960612200DDF50F /* AppDeatailViewContorller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		637DCB12295EA35F00DDF50F /* RankingFeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureSectionView.swift; sourceTree = "<group>"; };
 		637DCB14295EAF5000DDF50F /* RankingFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		637DCB16295EB87E00DDF50F /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
+		637DCB182960612200DDF50F /* AppDeatailViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDeatailViewContorller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				637DCB10295DEDC000DDF50F /* SeparatiorView.swift */,
 				637DCB12295EA35F00DDF50F /* RankingFeatureSectionView.swift */,
 				637DCB16295EB87E00DDF50F /* ExchangeCodeButtonView.swift */,
+				637DCB182960612200DDF50F /* AppDeatailViewContorller.swift */,
 				637DCB0D295DDB3F00DDF50F /* Cell */,
 			);
 			path = AppView;
@@ -237,6 +240,7 @@
 				637DCB0C295DD32F00DDF50F /* FeatureSectionView.swift in Sources */,
 				637DCB15295EAF5000DDF50F /* RankingFeatureCollectionViewCell.swift in Sources */,
 				637DCB13295EA35F00DDF50F /* RankingFeatureSectionView.swift in Sources */,
+				637DCB192960612200DDF50F /* AppDeatailViewContorller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
