@@ -148,11 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				637DCB09295DCC5A00DDF50F /* AppViewController.swift */,
+				637DCB182960612200DDF50F /* AppDeatailViewContorller.swift */,
 				637DCB0B295DD32F00DDF50F /* FeatureSectionView.swift */,
 				637DCB10295DEDC000DDF50F /* SeparatiorView.swift */,
 				637DCB12295EA35F00DDF50F /* RankingFeatureSectionView.swift */,
 				637DCB16295EB87E00DDF50F /* ExchangeCodeButtonView.swift */,
-				637DCB182960612200DDF50F /* AppDeatailViewContorller.swift */,
 				637DCB0D295DDB3F00DDF50F /* Cell */,
 			);
 			path = AppView;
