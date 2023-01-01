@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher //이미지 유알엘을 이미지뷰에 설정해주면 자동으로 인터넷 서버에서 이미지를 표시시켜준다 아주 좋은친구다
 
 
 final class TodayCollectionViewCell: UICollectionViewCell {
@@ -42,16 +43,22 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    func setup() {
+    func setup(today: Today) {
         setUpSubViews()
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10
         
-        subTitleLabel.text = "서브타이틀"
-        descriptionLabel.text = "설명"
-        titleLabel.text = "앱 이름"
+        subTitleLabel.text = today.subTitle
+        descriptionLabel.text = today.description
+        titleLabel.text = today.title
+        
+        // 킹피셔 쓸떄
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
+        
     }
 }
 
